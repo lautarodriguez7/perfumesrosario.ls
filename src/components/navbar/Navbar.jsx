@@ -29,7 +29,7 @@ const Navbar = () => {
 
             {/* All Product */}
             <li>
-                <Link to={'/allproduct'}>All Product</Link>
+                <Link to={'/allproduct'}>Perfumes</Link>
             </li>
 
             {/* Signup */}
@@ -52,10 +52,7 @@ const Navbar = () => {
                 <Link to={'/admin-dashboard'}>Admin</Link>
             </li>}
 
-            {/* logout */}
-            {user && <li className=" cursor-pointer" onClick={logout}>
-                logout
-            </li>}
+        
 
             {/* Cart */}
             <li>
@@ -63,16 +60,20 @@ const Navbar = () => {
                     Cart({cartItems.length})
                 </Link>
             </li>
+                {/* logout */}
+                {user && <li className=" cursor-pointer" onClick={logout}>
+                Desconectarse
+            </li>}
         </ul>
     )
     return (
-        <nav className="bg-pink-600 sticky top-0">
+        <nav className="bg-black sticky top-0">
             {/* main  */}
             <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
                 {/* left  */}
                 <div className="left py-3 lg:py-0">
                     <Link to={'/'}>
-                        <h2 className=" font-bold text-white text-2xl text-center">PERFUMESROSARIO.LS</h2>
+                        <h2 className=" font-bold text-white text-l text-center">PERFUMESROSARIO.LS</h2>
                     </Link>
                 </div>
 

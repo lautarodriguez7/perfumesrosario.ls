@@ -79,7 +79,7 @@ const CategoryPage = () => {
                                                 {title.substring(0, 25)}
                                             </h1>
                                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                                ₹{price}
+                                                ${price}
                                             </h1>
 
                                             <div
@@ -115,7 +115,7 @@ const CategoryPage = () => {
                                             <div className="flex justify-center">
                                             <img className=" mb-2" src="https://cdn-icons-png.flaticon.com/128/2748/2748614.png" alt="" />
                                             </div>
-                                            <h1 className=" text-black text-xl">No {categoryname} product found</h1>
+                                            <h1 className=" text-black text-xl">No hay productos en {categoryname}! </h1>
                                         </div>
                                     }
                                 </div>

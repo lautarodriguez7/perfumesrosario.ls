@@ -38,7 +38,7 @@ const AllProduct = () => {
     <div className="py-8">
             {/* Heading  */}
             <div className="">
-                <h1 className=" text-center mb-5 text-2xl font-semibold">All Products</h1>
+                <h1 className=" text-center mb-5 text-2xl font-semibold">Todos los perfumes</h1>
             </div>
 
             {/* main  */}
@@ -60,14 +60,14 @@ const AllProduct = () => {
                                             alt="blog"
                                         />
                                         <div className="p-6">
-                                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                                            <h2 className="tracking-widest text-xs title-font font-bold text-black mb-2">
                                                 PERFUMESROSARIO.LS
                                             </h2>
                                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                 {title.substring(0, 25)}
                                             </h1>
                                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                                ₹{price}
+                                                ${price}
                                             </h1>
 
                                             <div
