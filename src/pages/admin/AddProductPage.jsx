@@ -8,29 +8,14 @@ import Loader from "../../components/loader/Loader";
 
 const categoryList = [
     {
-        name: 'fashion'
+        name: 'ELLAS'
     },
     {
-        name: 'shirt'
+        name: 'ELLOS'
     },
     {
-        name: 'jacket'
+        name: 'OFERTAS'
     },
-    {
-        name: 'mobile'
-    },
-    {
-        name: 'laptop'
-    },
-    {
-        name: 'shoes'
-    },
-    {
-        name: 'home'
-    },
-    {
-        name: 'books'
-    }
 ]
 
 const AddProductPage = () => {
@@ -90,7 +75,7 @@ const AddProductPage = () => {
                     {/* Top Heading  */}
                     <div className="mb-5">
                         <h2 className='text-center text-2xl font-bold text-pink-500 '>
-                            Add Product
+                            Agregar perfume
                         </h2>
                     </div>
 

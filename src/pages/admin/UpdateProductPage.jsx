@@ -8,29 +8,14 @@ import Loader from "../../components/loader/Loader";
 
 const categoryList = [
     {
-        name: 'fashion'
+        name: 'ELLAS'
     },
     {
-        name: 'shirt'
+        name: 'ELLOS'
     },
     {
-        name: 'jacket'
+        name: 'OFERTAS'
     },
-    {
-        name: 'mobile'
-    },
-    {
-        name: 'laptop'
-    },
-    {
-        name: 'shoes'
-    },
-    {
-        name: 'home'
-    },
-    {
-        name: 'books'
-    }
 ]
 
 const UpdateProductPage = () => {
@@ -64,7 +49,7 @@ const UpdateProductPage = () => {
     const getSingleProductFunction = async () => {
         try {
             const productTemp = await getDoc(doc(fireDB, "products", id))
-            //   console.log(product.data())
+              console.log(product.data())
             const product = productTemp.data();
             setProduct({
                 title: product?.title,
