@@ -33,9 +33,9 @@ const Navbar = () => {
             </li>
 
             {/* Signup */}
-            {!user ? <li>
+            {/* {!user ? <li>
                 <Link to={'/signup'}>Signup</Link>
-            </li> : ""}
+            </li> : ""} */}
 
             {/* Signup */}
             {!user ? <li>
@@ -71,9 +71,10 @@ const Navbar = () => {
             {/* main  */}
             <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
                 {/* left  */}
-                <div className="left py-3 lg:py-0">
+                <div className="left py-3 lg:py-0 flex justify-center">
                     <Link to={'/'}>
-                        <h2 className=" font-bold text-white text-l text-center">PERFUMESROSARIO.LS</h2>
+                        {/* <h2 className=" font-bold text-white text-l text-center">PERFUMESROSARIO.LS</h2> */}
+                        <img src="/src/assets/logo-perfume.jpeg" className="rounded w-14" alt="" />
                     </Link>
                 </div>
 

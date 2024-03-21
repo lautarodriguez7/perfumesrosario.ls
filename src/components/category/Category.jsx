@@ -3,15 +3,15 @@ import { useNavigate } from "react-router";
 // category 
 const category = [
     {
-        image: '/src/assets/perfume_mujer.png',
+        image: '/src/assets/perfume_mujer3.png',
         name: 'ELLAS'
     },
     {
-        image: '/src/assets/perfume_hombre.png',
+        image: '/src/assets/perfume_hombre3.png',
         name: 'ELLOS'
     },
     {
-        image: '/src/assets/perfume_todos.png',
+        image: '/src/assets/perfume_todos2.png',
         name: 'OFERTAS'
     },
 ]
@@ -25,13 +25,13 @@ const Category = () => {
                 {/* main 1 */}
                 <div className="flex overflow-x-scroll lg:justify-center  hide-scroll-bar">
                     {/* main 2  */}
-                    <div className="flex ">
+                    <div className="flex justify-between my-5">
                         {/* category  */}
                         {category.map((item, index) => {
                             return (
-                                <div key={index} className="px-3 lg:px-10">
+                                <div key={index} className="px-3 m-5 lg:px-10">
                                     {/* Image  */}
-                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full  bg-black transition-all hover:bg-gray-400 cursor-pointer mb-1 " >
+                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full  bg-white transition-all hover:bg-gray-100 cursor-pointer mb-1 " >
                                         <div className="flex justify-center mb-12">
                                             {/* Image tag  */}
                                             <img src={item.image} alt="img" />

@@ -66,7 +66,7 @@ const HomePageProductCard = () => {
                                         />
                                         <div className="p-6">
                                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                                E-bharat
+                                                PERFUMESROSARIO.LS
                                             </h2>
                                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                 {title.substring(0, 25)}
@@ -81,7 +81,7 @@ const HomePageProductCard = () => {
                                                     ?
                                                     <button
                                                         onClick={() => deleteCart(item)}
-                                                        className=" bg-red-700 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold">
+                                                        className=" bg-red-700 hover:bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold">
 
                                                         Delete From Cart
                                                     </button>
@@ -90,7 +90,7 @@ const HomePageProductCard = () => {
 
                                                     <button
                                                         onClick={() => addCart(item)}
-                                                        className=" bg-pink-500 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold">
+                                                        className=" bg-green-400 hover:bg-gray-400 w-full text-white py-[4px] rounded-lg font-bold">
                                                         Add To cart
                                                     </button>
 

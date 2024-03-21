@@ -89,7 +89,8 @@ const CategoryPage = () => {
                                                 ?
                                                 <button
                                                     onClick={() => deleteCart(item)}
-                                                    className=" bg-red-700 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold">
+                                                    className=" bg-red-700 hover:bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold">
+
                                                     Delete To Cart
                                                 </button>
 
@@ -97,7 +98,7 @@ const CategoryPage = () => {
 
                                                 <button
                                                     onClick={() => addCart(item)}
-                                                    className=" bg-pink-500 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold">
+                                                    className=" bg-green-400 hover:bg-gray-400 w-full text-white py-[4px] rounded-lg font-bold">
                                                     Add To Cart
                                                 </button>
                                             }
