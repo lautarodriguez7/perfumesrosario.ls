@@ -4,12 +4,12 @@ const Footer = () => {
     return (
         <div>
             {/* footer  */}
-            <footer className="text-gray-600 body-font bg-pink-600">
+            <footer className="text-gray-600 body-font bg-black">
                 {/* main  */}
                 <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
                     {/* logo  */}
                     <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-                        <span className="text-xl font-bold">PERFUMESROSARIO.LS</span>
+                        <span className="text-xl p-1">PERFUMESROSARIO.LS</span>
                     </a>
                     {/* para  */}
              

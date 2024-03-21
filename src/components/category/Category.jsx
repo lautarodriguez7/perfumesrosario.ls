@@ -3,15 +3,15 @@ import { useNavigate } from "react-router";
 // category 
 const category = [
     {
-        image: 'https://cdn-icons-png.flaticon.com/256/4359/4359963.png',
+        image: '/src/assets/perfume_mujer.png',
         name: 'ELLAS'
     },
     {
-        image: 'https://cdn-icons-png.flaticon.com/256/11833/11833323.png',
+        image: '/src/assets/perfume_hombre.png',
         name: 'ELLOS'
     },
     {
-        image: 'https://cdn-icons-png.flaticon.com/256/8174/8174424.png',
+        image: '/src/assets/perfume_todos.png',
         name: 'OFERTAS'
     },
 ]
@@ -31,7 +31,7 @@ const Category = () => {
                             return (
                                 <div key={index} className="px-3 lg:px-10">
                                     {/* Image  */}
-                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full  bg-pink-500 transition-all hover:bg-pink-400 cursor-pointer mb-1 " >
+                                    <div onClick={() => navigate(`/category/${item.name}`)} className=" w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full  bg-black transition-all hover:bg-gray-400 cursor-pointer mb-1 " >
                                         <div className="flex justify-center mb-12">
                                             {/* Image tag  */}
                                             <img src={item.image} alt="img" />
