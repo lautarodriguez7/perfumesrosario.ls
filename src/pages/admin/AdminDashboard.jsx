@@ -1,20 +1,23 @@
-
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import ProductDetail from '../../components/admin/ProductDetail';
-import OrderDetail from '../../components/admin/OrderDetail';
-import UserDetail from '../../components/admin/UserDetail';
-import { useContext } from 'react';
-import myContext from '../../context/myContext';
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import ProductDetail from "../../components/admin/ProductDetail";
+import OrderDetail from "../../components/admin/OrderDetail";
+import UserDetail from "../../components/admin/UserDetail";
+import { useContext } from "react";
+import myContext from "../../context/myContext";
+import { Link } from "react-router-dom";
 
 const AdminDashboard = () => {
-    const user = JSON.parse(localStorage.getItem('users'));
+    const user = JSON.parse(localStorage.getItem("users"));
     const context = useContext(myContext);
-    const {getAllProduct, getAllOrder, getAllUser} = context;
+    const { getAllProduct, getAllOrder, getAllUser } = context;
     return (
         <div>
             {/* Top */}
             <div className="top mb-5 px-5 mt-5">
                 <div className=" bg-gray-100 py-5 border  rounded-lg">
+                    <Link to={"/"}>
+                        <button className="px-5 py-2 bg-black border text-white opacity-80 hover:bg-gray-400 border-gray-1000 rounded">Volver a la web</button>
+                    </Link>
                     <h1 className=" text-center text-2xl font-bold text-black">Admin Dashboard</h1>
                 </div>
             </div>
@@ -29,7 +32,7 @@ const AdminDashboard = () => {
                             <img src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png" alt="" />
                         </div>
                         {/* text  */}
-                           <div className="">
+                        <div className="">
                             {/* Name  */}
                             <h1 className=" text-center text-lg">
                                 <span className=" font-bold">Name : </span>
@@ -63,8 +66,8 @@ const AdminDashboard = () => {
                         <TabList className="flex flex-wrap -m-4 text-center justify-center">
                             {/* Total Products */}
                             <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
-                                <div className=" border bg-gray-100 hover:bg-pink-100  px-4 py-3 rounded-xl" >
-                                    <div className="text-black w-12 h-12 mb-3 inline-block" >
+                                <div className=" border bg-gray-100 hover:bg-pink-100  px-4 py-3 rounded-xl">
+                                    <div className="text-black w-12 h-12 mb-3 inline-block">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width={50}
@@ -85,17 +88,16 @@ const AdminDashboard = () => {
                                             <path d="M4.5 15.5h15" />
                                             <path d="m15 11-1 9" />
                                         </svg>
-
                                     </div>
-                                    <h2 className="title-font font-medium text-3xl text-red-300 fonts1" >{getAllProduct.length}</h2>
-                                    <p className=" text-black  font-bold" >Total Products</p>
+                                    <h2 className="title-font font-medium text-3xl text-red-300 fonts1">{getAllProduct.length}</h2>
+                                    <p className=" text-black  font-bold">Total Products</p>
                                 </div>
                             </Tab>
 
                             {/* Total Order  */}
                             <Tab className="p-4 md:w-1/4 sm:w-1/2 w-full cursor-pointer">
-                                <div className=" border bg-gray-100 hover:bg-pink-100  px-4 py-3 rounded-xl" >
-                                    <div className="text-black w-12 h-12 mb-3 inline-block" >
+                                <div className=" border bg-gray-100 hover:bg-pink-100  px-4 py-3 rounded-xl">
+                                    <div className="text-black w-12 h-12 mb-3 inline-block">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width={50}
@@ -116,15 +118,15 @@ const AdminDashboard = () => {
                                             <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
                                         </svg>
                                     </div>
-                                    <h2 className="title-font font-medium text-3xl text-red-300 fonts1" >{getAllOrder.length}</h2>
-                                    <p className=" text-black  font-bold" >Total Order</p>
+                                    <h2 className="title-font font-medium text-3xl text-red-300 fonts1">{getAllOrder.length}</h2>
+                                    <p className=" text-black  font-bold">Total Order</p>
                                 </div>
                             </Tab>
 
                             {/* Total User  */}
                             <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
-                                <div className=" border bg-gray-100 hover:bg-pink-100  px-4 py-3 rounded-xl" >
-                                    <div className="text-black w-12 h-12 mb-3 inline-block" >
+                                <div className=" border bg-gray-100 hover:bg-pink-100  px-4 py-3 rounded-xl">
+                                    <div className="text-black w-12 h-12 mb-3 inline-block">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width={50}
@@ -142,10 +144,9 @@ const AdminDashboard = () => {
                                             <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                                             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                                         </svg>
-
                                     </div>
-                                    <h2 className="title-font font-medium text-3xl text-red-300 fonts1" >{getAllUser.length}</h2>
-                                    <p className=" text-black  font-bold" >Total User</p>
+                                    <h2 className="title-font font-medium text-3xl text-red-300 fonts1">{getAllUser.length}</h2>
+                                    <p className=" text-black  font-bold">Total User</p>
                                 </div>
                             </Tab>
                         </TabList>
@@ -155,17 +156,17 @@ const AdminDashboard = () => {
                         </TabPanel>
 
                         <TabPanel>
-                            <OrderDetail/>
+                            <OrderDetail />
                         </TabPanel>
 
                         <TabPanel>
-                           <UserDetail/>
+                            <UserDetail />
                         </TabPanel>
                     </Tabs>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default AdminDashboard;
