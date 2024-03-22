@@ -61,13 +61,13 @@ const Navbar = () => {
                 </Link>
             </li>
                 {/* logout */}
-                {user && <li className=" cursor-pointer" onClick={logout}>
+                {user && <li className="text-red-600 cursor-pointer" onClick={logout}>
                 Desconectarse
             </li>}
         </ul>
     )
     return (
-        <nav className="bg-black sticky top-0">
+        <nav className="bg-black sticky top-0 opacity-85	">
             {/* main  */}
             <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
                 {/* left  */}

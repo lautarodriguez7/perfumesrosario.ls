@@ -20,7 +20,7 @@ const AllProduct = () => {
     const addCart = (item) => {
         // console.log(item)
         dispatch(addToCart(item));
-        toast.success("Add to cart")
+        toast.success("Agregado al carrito")
     }
 
     const deleteCart = (item) => {
@@ -51,23 +51,24 @@ const AllProduct = () => {
                     {getAllProduct.map((item, index) => {
                             const { id, title, price, productImageUrl } = item
                             return (
-                                <div key={index} className="p-4 w-full md:w-1/4">
-                                    <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                                <div key={index} className="m-1 w-full md:w-1/4">
+                                    <div className="flex flex-col justify-between h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                                         <img
                                             onClick={() => navigate(`/productinfo/${id}`)}
-                                            className="lg:h-80  h-96 w-full"
+                                            className="max-h-60 w-auto"
                                             src={productImageUrl}
                                             alt="blog"
                                         />
-                                        <div className="p-6">
-                                            <h2 className="tracking-widest text-xs title-font font-bold text-black mb-2">
+                                        <div className="p-2">
+                                            <span className="tracking-widest text-xs title-font font-bold text-black mb-2">
                                                 PERFUMESROSARIO.LS
-                                            </h2>
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                            </span>
+                                            <hr />
+                                            <span className="title-font text-m font-medium text-gray-900">
                                                 {title.substring(0, 25)}
-                                            </h1>
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                                ${price}
+                                            </span>
+                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-1">
+                                              <b>${price}</b>
                                             </h1>
 
                                             <div
@@ -79,7 +80,7 @@ const AllProduct = () => {
                                                     onClick={() => deleteCart(item)}
                                                     className=" bg-red-700 hover:bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold">
 
-                                                    Delete From Cart
+                                                    Eliminar del carrito
                                                 </button>
 
                                                 : 
@@ -87,7 +88,7 @@ const AllProduct = () => {
                                                 <button
                                                     onClick={() => addCart(item)}
                                                     className=" bg-green-400 hover:bg-gray-400 w-full text-white py-[4px] rounded-lg font-bold">
-                                                    Add To Cart
+                                                    Agregar al carrito
                                                 </button>
                                             }
                                             </div>

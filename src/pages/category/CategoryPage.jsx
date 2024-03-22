@@ -23,7 +23,7 @@ const CategoryPage = () => {
     const addCart = (item) => {
         // console.log(item)
         dispatch(addToCart(item));
-        toast.success("Add to cart")
+        toast.success("Agregado al carrito")
     }
 
     const deleteCart = (item) => {
@@ -91,7 +91,7 @@ const CategoryPage = () => {
                                                     onClick={() => deleteCart(item)}
                                                     className=" bg-red-700 hover:bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold">
 
-                                                    Delete To Cart
+                                                    Eliminar del carrito
                                                 </button>
 
                                                 : 
@@ -99,7 +99,7 @@ const CategoryPage = () => {
                                                 <button
                                                     onClick={() => addCart(item)}
                                                     className=" bg-green-400 hover:bg-gray-400 w-full text-white py-[4px] rounded-lg font-bold">
-                                                    Add To Cart
+                                                    Agregar al carrito
                                                 </button>
                                             }
                                             </div>

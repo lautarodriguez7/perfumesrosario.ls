@@ -40,7 +40,7 @@ const ProductInfo = () => {
     const addCart = (item) => {
         // console.log(item)
         dispatch(addToCart(item));
-        toast.success("Add to cart")
+        toast.success("Agregado al carrito")
     }
 
     const deleteCart = (item) => {
@@ -184,14 +184,14 @@ const ProductInfo = () => {
                                                     onClick={() => deleteCart(product)}
                                                     className="w-full px-4 py-3 text-center bg-red-400 hover:bg-gray-500 border border--600  hover:text-gray-100  rounded-xl"
                                                 >
-                                                    Delete to cart
+                                                    Eliminar del carrito
                                                 </button>
                                                 :
                                                 <button
                                                     onClick={() => addCart(product)}
                                                     className="w-full px-4 py-3 text-center bg-green-400 hover:bg-gray-400  rounded-xl"
                                                 >
-                                                    Add to cart
+                                                    Agregar al carrito
                                                 </button>
                                             }
                                         </div>

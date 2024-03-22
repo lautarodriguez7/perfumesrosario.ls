@@ -19,14 +19,14 @@ const HomePageProductCard = () => {
 
     const dispatch = useDispatch();
 
-    // add to cart function
+    // Agregar al carrito function
     const addCart = (item) => {
         dispatch(addToCart(item));
         toast.success("Added to cart")
     }
 
 
-    // delete from cart function
+    // Eliminar del carrito function
     const deleteCart = (item) => {
         dispatch(deleteFromCart(item));
         toast.success("Delete cart")
@@ -83,7 +83,7 @@ const HomePageProductCard = () => {
                                                         onClick={() => deleteCart(item)}
                                                         className=" bg-red-700 hover:bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold">
 
-                                                        Delete From Cart
+                                                        Eliminar del carrito
                                                     </button>
 
                                                     :
@@ -91,7 +91,7 @@ const HomePageProductCard = () => {
                                                     <button
                                                         onClick={() => addCart(item)}
                                                         className=" bg-green-400 hover:bg-gray-400 w-full text-white py-[4px] rounded-lg font-bold">
-                                                        Add To cart
+                                                        Agregar al carrito
                                                     </button>
 
                                                 }
