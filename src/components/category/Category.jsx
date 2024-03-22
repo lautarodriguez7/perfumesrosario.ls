@@ -3,15 +3,15 @@ import { useNavigate } from "react-router";
 // category 
 const category = [
     {
-        image: '/src/assets/perfume_mujer3.png',
+        image: '/public/img/perfume_mujer3.png',
         name: 'ELLAS'
     },
     {
-        image: '/src/assets/perfume_hombre3.png',
+        image: '/public/img/perfume_hombre3.png',
         name: 'ELLOS'
     },
     {
-        image: '/src/assets/perfume_todos2.png',
+        image: '/public/img/perfume_todos2.png',
         name: 'OFERTAS'
     },
 ]
