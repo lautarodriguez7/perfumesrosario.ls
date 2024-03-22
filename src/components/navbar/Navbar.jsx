@@ -74,7 +74,7 @@ const Navbar = () => {
                 <div className="left py-3 lg:py-0 flex justify-center">
                     <Link to={'/'}>
                         {/* <h2 className=" font-bold text-white text-l text-center">PERFUMESROSARIO.LS</h2> */}
-                        <img src="/src/assets/logo-perfume.jpeg" className="rounded w-14" alt="" />
+                        <img src="img/logo-perfume.jpeg" className="rounded w-14" alt="" />
                     </Link>
                 </div>
 
