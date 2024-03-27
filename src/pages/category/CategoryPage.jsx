@@ -63,12 +63,14 @@ const CategoryPage = () => {
                                                 return (
                                                     <div key={index} className="m-1 w-full md:w-1/4">
                                                         <div className="flex flex-col justify-between h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
-                                                            <img
-                                                                onClick={() => navigate(`/productinfo/${id}`)}
-                                                                className="max-h-60 w-auto"
-                                                                src={productImageUrl}
-                                                                alt="blog"
-                                                            />
+                                                            <div className="flex justify-center">
+                                                                <img
+                                                                    onClick={() => navigate(`/productinfo/${id}`)}
+                                                                    className="max-h-60 w-3/6"
+                                                                    src={productImageUrl}
+                                                                    alt="blog"
+                                                                />
+                                                            </div>
                                                             <div className="p-2">
                                                                 <span className="tracking-widest text-xs title-font font-bold text-black mb-2">
                                                                     PERFUMESROSARIO.LS
