@@ -21,13 +21,13 @@ const HomePageProductCard = () => {
     // Agregar al carrito function
     const addCart = item => {
         dispatch(addToCart(item));
-        toast.success("Added to cart");
+        toast.success("Agregado al carrito!");
     };
 
     // Eliminar del carrito function
     const deleteCart = item => {
         dispatch(deleteFromCart(item));
-        toast.success("Delete cart");
+        toast.error("Eliminado del carrito!");
     };
 
     useEffect(() => {

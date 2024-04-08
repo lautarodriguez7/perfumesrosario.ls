@@ -13,75 +13,67 @@ const ProductInfo = () => {
     const context = useContext(myContext);
     const { loading, setLoading } = context;
 
-    const [product, setProduct] = useState('')
+    const [product, setProduct] = useState("");
     // console.log(product)
 
-    const { id } = useParams()
+    const { id } = useParams();
 
     // console.log(product)
 
     // getProductData
     const getProductData = async () => {
-        setLoading(true)
+        setLoading(true);
         try {
-            const productTemp = await getDoc(doc(fireDB, "products", id))
+            const productTemp = await getDoc(doc(fireDB, "products", id));
             // console.log({...productTemp.data(), id : productTemp.id})
-            setProduct({...productTemp.data(), id : productTemp.id})
-            setLoading(false)
+            setProduct({ ...productTemp.data(), id: productTemp.id });
+            setLoading(false);
         } catch (error) {
-            console.log(error)
-            setLoading(false)
+            console.log(error);
+            setLoading(false);
         }
-    }
+    };
 
-    const cartItems = useSelector((state) => state.cart);
+    const cartItems = useSelector(state => state.cart);
     const dispatch = useDispatch();
 
-    const addCart = (item) => {
+    const addCart = item => {
         // console.log(item)
         dispatch(addToCart(item));
-        toast.success("Agregado al carrito")
-    }
+        toast.success("Agregado al carrito");
+    };
 
-    const deleteCart = (item) => {
+    const deleteCart = item => {
         dispatch(deleteFromCart(item));
-        toast.success("Delete cart")
-    }
+        toast.success("Eliminado de carrito");
+    };
 
     // console.log(cartItems)
 
     useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cartItems));
-    }, [cartItems])
-
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+    }, [cartItems]);
 
     useEffect(() => {
-        getProductData()
-
-    }, [])
+        getProductData();
+    }, []);
     return (
         <Layout>
             <section className="py-5 lg:py-16 font-poppins dark:bg-gray-800">
-                {loading ?
+                {loading ? (
                     <>
                         <div className="flex justify-center items-center">
                             <Loader />
                         </div>
                     </>
-
-                    :
-
+                ) : (
                     <>
                         <div className="max-w-6xl px-4 mx-auto">
                             <div className="flex flex-wrap mb-24 -mx-4">
                                 <div className="w-full px-4 mb-8 md:w-1/2 md:mb-0">
                                     <div className="">
                                         <div className="">
-                                            <img
-                                                className=" w-full lg:h-[39em] rounded-lg"
-                                                src={product?.productImageUrl}
-                                                alt=""
-                                            />
+                                            <img className=" w-full lg:h-[39em] rounded-lg" src={product?.productImageUrl} alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -170,40 +162,37 @@ const ProductInfo = () => {
                                             </p>
                                         </div>
                                         <div className="mb-6">
-                                            <h2 className="mb-2 text-lg font-bold text-gray-700 dark:text-gray-400">
-                                                Descripcion :
-                                            </h2>
+                                            <h2 className="mb-2 text-lg font-bold text-gray-700 dark:text-gray-400">Descripcion :</h2>
                                             <p>{product?.description}</p>
                                         </div>
 
                                         <div className="mb-6 " />
                                         <div className="flex flex-wrap items-center mb-6">
-                                            {cartItems.some((p) => p.id === product.id)
-                                                ?
+                                            {cartItems.some(p => p.id === product.id) ? (
                                                 <button
                                                     onClick={() => deleteCart(product)}
                                                     className="w-full px-4 py-3 text-center bg-red-400 hover:bg-gray-500 border border--600  hover:text-gray-100  rounded-xl"
                                                 >
                                                     Eliminar del carrito
                                                 </button>
-                                                :
+                                            ) : (
                                                 <button
                                                     onClick={() => addCart(product)}
                                                     className="w-full px-4 py-3 text-center bg-green-400 hover:bg-gray-400  rounded-xl"
                                                 >
                                                     Agregar al carrito
                                                 </button>
-                                            }
+                                            )}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </>}
+                    </>
+                )}
             </section>
-
         </Layout>
     );
-}
+};
 
 export default ProductInfo;

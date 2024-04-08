@@ -15,7 +15,7 @@ const CartPage = () => {
 
     const deleteCart = item => {
         dispatch(deleteFromCart(item));
-        toast.success("Delete cart");
+        toast.success("Eliminado del carrito!");
     };
 
     const handleIncrement = id => {

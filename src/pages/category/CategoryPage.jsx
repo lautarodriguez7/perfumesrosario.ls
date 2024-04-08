@@ -28,7 +28,7 @@ const CategoryPage = () => {
 
     const deleteCart = item => {
         dispatch(deleteFromCart(item));
-        toast.success("Delete cart");
+        toast.success("Eliminado del carrito!");
     };
 
     // console.log(cartItems)
